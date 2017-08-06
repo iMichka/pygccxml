@@ -5,6 +5,8 @@ env:
   global:
     - WINDOWS=0
     - SITECUSTOMIZELIBPATH=0
+    dist: trusty
+    sudo: required
 
 matrix:
   include:
@@ -60,15 +62,11 @@ matrix:
           # gcc 5.2.1
             - g++-5
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
         - XML_GENERATOR="castxml"
         - SITECUSTOMIZELIBPATH="/home/travis/virtualenv/python3.5/lib/python3.5/sitecustomize.py"
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
          # gcc 4.8.2 with c++03
@@ -76,8 +74,6 @@ matrix:
          - CPPSTD="-std=c++03"
          - SITECUSTOMIZELIBPATH="/home/travis/virtualenv/python3.5/lib/python3.5/sitecustomize.py"
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
          # gcc 4.8.2 with c++11
@@ -85,8 +81,6 @@ matrix:
          - CPPSTD="-std=c++11"
          - SITECUSTOMIZELIBPATH="/home/travis/virtualenv/python3.5/lib/python3.5/sitecustomize.py"
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
        - XML_GENERATOR="castxml"
@@ -100,8 +94,6 @@ matrix:
             # gcc 5.3.0
             - g++-5
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
        - XML_GENERATOR="castxml"
@@ -130,15 +122,11 @@ matrix:
         - TRAVIS_PYTHON_VERSION="3"
         - SITECUSTOMIZELIBPATH="/usr/local/lib/python3.6/site-packages/sitecustomize.py"
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
         - XML_GENERATOR="castxml-18032017"
         - SITECUSTOMIZELIBPATH="/home/travis/virtualenv/python3.5/lib/python3.5/sitecustomize.py"
     - os: linux
-      dist: trusty
-      sudo: required
       python: 3.5
       env:
         - XML_GENERATOR="castxml-18032017"
