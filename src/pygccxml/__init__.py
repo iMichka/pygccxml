@@ -26,6 +26,7 @@ find all those declaration classes in the :mod:declarations sub-package.
 
 """
 
+import importlib.metadata
 import warnings
 
 from . import declarations
@@ -41,4 +42,4 @@ warnings.simplefilter("always", DeprecationWarning)
 # TODO:
 # 1. Add "explicit" property for constructors
 
-__version__ = '2.3.0'
+__version__ = importlib.metadata.version("pygccxml")
