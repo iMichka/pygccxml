@@ -26,6 +26,7 @@ find all those declaration classes in the :mod:declarations sub-package.
 
 """
 
+import sys
 import warnings
 
 from . import declarations
